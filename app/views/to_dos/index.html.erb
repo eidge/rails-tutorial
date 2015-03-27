@@ -1,0 +1,14 @@
+<div>
+  <h1>To Do's</h1>
+
+  <div class="to-dos-container">
+    <% @to_dos.each do |to_do| %>
+      <div>
+        <%= link_to to_do.title, to_do_path(to_do) %>
+        <%= link_to 'delete', to_do_path(to_do), method: :delete %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to 'New', new_to_do_path %>
+</div>
