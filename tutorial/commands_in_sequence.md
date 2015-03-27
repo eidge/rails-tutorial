@@ -39,3 +39,8 @@ Install bootstrap
 ```bash
   rails generate bootstrap:install static
 ```
+
+Use bootstrap layout
+```bash
+  rails g bootstrap:layout
+```
