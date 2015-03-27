@@ -40,6 +40,8 @@ class ToDosController < ApplicationController
   end
 
   def destroy
+    ToDo.find(params[:id]).destroy!
+    redirect_to to_dos_url
   end
 
   private

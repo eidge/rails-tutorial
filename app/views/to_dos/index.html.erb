@@ -5,6 +5,7 @@
     <% @to_dos.each do |to_do| %>
       <div>
         <%= link_to to_do.title, to_do_path(to_do) %>
+        <%= link_to 'delete', to_do_path(to_do), method: :delete %>
       </div>
     <% end %>
   </div>
