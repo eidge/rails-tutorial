@@ -12,6 +12,9 @@
   <% @to_do.to_do_items.each do |to_do_item| %>
     <div>
       <%= link_to to_do_item.description, edit_to_do_to_do_item_path(@to_do, to_do_item) %>
+      <%= link_to to_do_to_do_item_path(@to_do, to_do_item), method: :delete do %>
+        <span class="fa fa-trash-o pull-right" aria-hidden="true"></span>
+      <% end %>
     </div>
     <hr />
   <% end %>

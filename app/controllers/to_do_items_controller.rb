@@ -28,6 +28,8 @@ class ToDoItemsController < ApplicationController
   end
 
   def destroy
+    @to_do.to_do_items.find(params[:id]).destroy!
+    redirect_to @to_do
   end
 
   private
