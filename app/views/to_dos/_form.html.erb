@@ -1,16 +1,18 @@
 <%= form_for @to_do do |f| %>
   <% if @to_do.errors.any? %>
-    <ul>
-      <% @to_do.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
+    <div class="alert alert-danger">
+      <ul>
+        <% @to_do.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
 
-  <label for="title">
-    Title:
-    <%= f.text_field :title %>
-  </label>
+  <div class="form-group">
+    <label>Title</label>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'title' %>
+  </div>
 
-  <%= f.submit %>
+  <%= f.submit class: 'btn btn-success' %>
 <% end %>
