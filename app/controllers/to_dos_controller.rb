@@ -25,9 +25,18 @@ class ToDosController < ApplicationController
   end
 
   def edit
+    @to_do = ToDo.find(params[:id])
   end
 
   def update
+    @to_do = ToDo.find(params[:id])
+
+    # Update entry in the database
+    if @to_do.update(to_do_params)
+      redirect_to @to_do
+    else
+      render :edit
+    end
   end
 
   def destroy
