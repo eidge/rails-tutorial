@@ -44,3 +44,10 @@ Use bootstrap layout
 ```bash
   rails g bootstrap:layout
 ```
+
+## step-3
+
+Create ToDoItem model
+```bash
+  rails g model to_do_item description to_do:references
+```
