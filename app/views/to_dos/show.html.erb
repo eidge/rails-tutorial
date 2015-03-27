@@ -1,6 +1,11 @@
-<div>
-  <h1><%= @to_do.title %></h1>
+<div class="page-header">
+  <h1><%= @to_do.title %>
+    <small>
+      <%= link_to edit_to_do_path(@to_do) do %>
+        <span class="fa fa-pencil" aria-hidden="true"></span>
+      <% end %>
+    </small>
+  </h1>
 </div>
 
-<%= link_to 'edit', edit_to_do_path(@to_do) %>
-<%= link_to 'back', to_dos_path %>
+<%= link_to 'back', to_dos_path, class: 'btn btn-default' %>

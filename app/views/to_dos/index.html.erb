@@ -1,14 +1,19 @@
 <div>
-  <h1>To Do's</h1>
+  <div class="page-header">
+    <h1>To Do's</h1>
+  </div>
 
   <div class="to-dos-container">
     <% @to_dos.each do |to_do| %>
       <div>
         <%= link_to to_do.title, to_do_path(to_do) %>
-        <%= link_to 'delete', to_do_path(to_do), method: :delete %>
+        <%= link_to to_do_path(to_do), method: :delete do %>
+          <span class="fa fa-trash-o pull-right" aria-hidden="true"></span>
+        <% end %>
       </div>
+      <hr />
     <% end %>
   </div>
 
-  <%= link_to 'New', new_to_do_path %>
+  <%= link_to 'New', new_to_do_path, class: 'btn btn-success pull-right'%>
 </div>
