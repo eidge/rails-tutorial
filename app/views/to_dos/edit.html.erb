@@ -1,21 +1,5 @@
 <div>
   <h1>Edit To Do</h1>
-
-  <%= form_for @to_do do |f| %>
-    <% if @to_do.errors.any? %>
-      <ul>
-        <% @to_do.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    <% end %>
-
-    <label for="title">
-      Title:
-      <%= f.text_field :title %>
-    </label>
-
-    <%= f.submit %>
-  <% end %>
+  <%= render 'form' %>
 </div>
 
