@@ -15,6 +15,16 @@ class ToDoItemsController < ApplicationController
   end
 
   def edit
+    @to_do_item = @to_do.to_do_items.find(params[:id])
+  end
+
+  def update
+    @to_do_item = @to_do.to_do_items.find(params[:id])
+    if @to_do_item.update(to_do_item_params)
+      redirect_to to_do_path(@to_do), flash: { success: 'Saved successfully' }
+    else
+      render :new
+    end
   end
 
   def destroy
