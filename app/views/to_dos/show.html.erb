@@ -8,4 +8,14 @@
   </h1>
 </div>
 
+<div class="to-dos-container">
+  <% @to_do.to_do_items.each do |to_do_item| %>
+    <div>
+      <%= link_to to_do_item.description, edit_to_do_to_do_item_path(@to_do, to_do_item) %>
+    </div>
+    <hr />
+  <% end %>
+</div>
+
+<%= link_to 'Add item', new_to_do_to_do_item_path(@to_do), class: 'btn btn-success' %>
 <%= link_to 'back', to_dos_path, class: 'btn btn-default' %>
