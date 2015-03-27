@@ -1,5 +1,8 @@
 # Commands
 
+This file contains every console command run in the order they were first typed
+into the console.
+
 ## step-0
 
 Create application folder structure and initial files
@@ -20,3 +23,7 @@ Create ToDo model
   rails g model to_do title # creates a migration and a ToDo model class
 ```
 
+Migrate database
+```bash
+  rake db:migrate
+```
