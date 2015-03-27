@@ -27,3 +27,15 @@ Migrate database
 ```bash
   rake db:migrate
 ```
+
+## step-2
+
+Install gems (after Gemfile modification)
+```bash
+  bundle install
+```
+
+Install bootstrap
+```bash
+  rails generate bootstrap:install static
+```
